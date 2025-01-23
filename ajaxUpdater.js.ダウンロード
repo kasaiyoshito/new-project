@@ -1,0 +1,68 @@
+//=================================
+// お客様の声用js
+// (Ajax通信でコメントをPOSTする)
+// 2010.06.23 ukena
+//=================================
+function ajaxUpdater_goiken() {
+
+    // コメント
+    var param = document.getElementById('goikenTxt').value;
+
+    //コメントが空文字だったらreturn
+    if (param == "") {
+       return;
+    }
+
+    // XMLHttpRequestオブジェクト生成
+    var httpoj = createHttpRequest();
+    var method = "POST";
+    var fileName = "/cgi-bin/goobike/goiken/top_user_question_finish.cgi";
+    var async = true;
+    //open メソッド
+    httpoj.open( method , fileName , async );
+    httpoj.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
+    httpoj.setRequestHeader("Cache-Control", "no-cache");
+
+    // サーバーからの応答時の処理を定義（結果のページへの反映）
+    httpoj.onreadystatechange = function() {
+        var msg = document.getElementById("goikenBox");
+        if (httpoj.readyState == 4) {
+            if (httpoj.status == 200) {
+                msg.innerHTML = httpoj.responseText;
+            } else {
+                httpoj = null;
+            }
+        }
+    }
+    httpoj.send("voice=" + encodeURI(param));
+
+}
+
+
+//XMLHttpRequestオブジェクト生成
+function createHttpRequest(){
+        try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+        } catch (e) {
+        }
+        //Win ie用
+        if(window.ActiveXObject){
+                try {
+                        //MSXML2以降用
+                        return new ActiveXObject("Msxml2.XMLHTTP") //[1]'
+                } catch (e) {
+                        try {
+                                //旧MSXML用
+                                return new ActiveXObject("Microsoft.XMLHTTP") //[1]'
+                        } catch (e2) {
+                                return null
+                        }
+                }
+        } else if(window.XMLHttpRequest){
+                //Win ie以外のXMLHttpRequestオブジェクト実装ブラウザ用
+        return new XMLHttpRequest() //[1]'
+        } else {
+                return null
+        }
+}
+

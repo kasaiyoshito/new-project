@@ -1,0 +1,8 @@
+
+function addbookmark() {
+	if (window.external) {
+		window.external.AddFavorite("http://www.goobike.com/index.html","GooBike.com"); //#17206 MODIFIED by xa_quxt 20171229 Goobike‘S‘Ì‚ÌHTTPS‰»
+	} else {
+		alert("Internet Explorer 4.0°Ê¾å¤Ç»ÈÍÑ²ÄÇ½¤Ç¤¹¡£");
+	}
+}

@@ -1,0 +1,135 @@
+/* #24433 START BY xa_zhangtl 20190813 バイク本体のグロナビ改修 */
+.first_mente{
+	margin-left: 159px;
+	border-left: 1px solid #cccccc;
+}
+.last_mente{
+	border-right: 1px solid #cccccc;
+}
+.mente_padding{
+    padding-left: 0px !important;
+}
+/* #24433 END BY xa_zhangtl 20190813 バイク本体のグロナビ改修 */
+
+/* #27336 START BY yuany 20200611【GB】＜駐車場コンテンツ撤去＞開発 */
+.subnavi{
+	padding-left: 84px;
+}
+
+.subnavi li:first-child{
+	border-left:solid 1px #ccc;
+}
+
+/* #27336 START BY yuany 20200611【GB】＜駐車場コンテンツ撤去＞開発 */
+
+/* #34866 START by xa_lichm 20230908 GOOBIKE-4878 */
+.global_nav_pc {
+  width: 960px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.global_nav_pc ul {
+  display: flex;
+  justify-content: space-between;
+}
+.global_nav_pc ul li {
+  position: relative;
+}
+.global_nav_pc ul li > a {
+  position: relative;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 14px 14px 14px 15px;
+}
+.global_nav_pc ul li:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 1px;
+  height: 13px;
+  background: #ccc;
+  transform: translateY(-50%);
+}
+.global_nav_pc ul li.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #dc0000;
+}
+.global_nav_pc ul li > a:hover,
+.global_nav_pc ul li > a.current {
+  background: #f2f4f7;
+}
+.global_nav_pc ul li span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+  font-family: verdana,arial,sans-serif;  /* #35142 ADD by xa_lichm 20231102 GOOBIKE-4925 */
+}
+.global_nav_pc ul li.-dropdown span {
+  position: relative;
+}
+.global_nav_pc ul li.-dropdown span::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("/common/img/icon_nav_arrow.svg") no-repeat center/contain;
+  margin: 0px 0 -1px 4px;
+}
+
+.global_nav_pc.-sub {
+  border-top: none;
+  border-bottom: none;
+}
+.global_nav_pc.-sub ul.subnavi {
+  position: relative;
+  display: none;
+  background: #f2f4f7;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+}
+.global_nav_pc.-sub ul li {
+  display: inline-block;
+}
+.global_nav_pc.-sub ul li:first-child {
+  border-left: none;
+}
+.global_nav_pc.-sub ul li:hover::after {
+  content: none;
+}
+.global_nav_pc.-sub ul li > a {
+  position: relative;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 12px 60px;
+}
+.global_nav_pc.-sub ul li > a:hover {
+  opacity: .8;
+}
+/* #35980 START by xa_yaoj 2024-07-10 GOOBIKE-5140 【グーバイク】グロナビ_買取上部の吹き出し差し替え */
+.global_nav_pc ul li.-icon a::before {
+  content: url(/common/img/bubble_icon.svg);
+  position: absolute;
+  top: -8px;
+  left: 28px;
+  animation: bubblemove 1.2s ease-in-out infinite;
+}
+@keyframes bubblemove {
+  0%{top: -8px}
+  50%{top: -5px}
+  100%{top: -8px}
+}
+/* #35980 END by xa_yaoj 2024-07-10 GOOBIKE-5140 【グーバイク】グロナビ_買取上部の吹き出し差し替え */
+
+/* #34866 END by xa_lichm 20230908 GOOBIKE-4878 */

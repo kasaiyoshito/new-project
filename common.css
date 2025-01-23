@@ -1,0 +1,1225 @@
+@charset "euc-jp";
+
+/* Table of Contents
+--------------------------
+  Element Definition
+  Common Settings
+  Layout Settings
+  Image Replacement
+  Detail Settings
+-------------------------- */
+
+/* Element Definition
+-------------------------- */
+/* ------------------------------------------------------
+base setting
+------------------------------------------------------ */
+body {
+	margin:0;
+	border:0;
+	padding:0;
+	line-height:1.4;
+}
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, dl, dt, dd, address,
+div, form, caption, img {
+	list-style-type:none;
+	margin:0;
+	border:0;
+	padding:0;
+	font-style:normal;
+	font-weight:normal;
+}
+
+body.top table, body.maker table, body.area table, body.import table,
+body.top th, body.maker th, body.area th, body.import th,
+body.top td, body.maker td, body.area td, body.import td{
+	list-style-type:none;
+	margin:0;
+	border:0;
+	padding:0;
+	font-style:normal;
+	font-weight:normal;
+}
+
+
+
+img { border: none; }
+iframe {
+	border:medium none;
+	margin:0;
+	padding:0;
+}
+
+/* ------------------------------------------------------
+font
+------------------------------------------------------ */
+strong { font-weight:normal;}
+
+a:link {
+	color:#0000FF;
+	text-decoration:underline;
+}
+a:hover {
+	color:#ff0000;
+	text-decoration:none;
+}
+
+/* ------------------------------------------------------
+clearfix
+------------------------------------------------------ */
+/* for modern browser */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* for IE 5.5-7 */
+.clearfix { zoom: 1; }
+
+/* Common Settings
+-------------------------- */
+.clear{
+	clear: both;
+}
+
+
+
+/* Layout Settings
+-------------------------- */
+div#wrap {
+	width:960px;
+	margin:0 auto;
+	position: relative;
+	text-align:left;
+}
+
+div#header{
+	width:960px;
+	text-align:left;
+}
+
+div#contents {
+	width:960px;
+	float:left;
+	padding-bottom:15px;
+	text-align:left;
+}
+
+div#main{
+	width:745px;
+	float:left;
+}
+div#sub{
+	width: 200px;
+	float: right;
+}
+
+div#footer{
+	margin: 0px;
+	padding: 0;
+	clear: both;
+}
+
+div#footer table,
+div#footer table tr td {
+	border:none;
+	text-align: left;
+}
+
+/* Detail Settings
+-------------------------- */
+
+/* Header Definition */
+
+div#header h1 {
+	font-size: 100%;
+	padding:4px 0 ;
+	border-bottom: 1px solid #ccc;
+	zoom:1;
+	text-align:left;
+}
+
+div#header div#gNav {
+	position: relative;
+	margin:0 ;
+}
+div#header div#gNav ul {
+	position: absolute;
+	top:-21px;
+	right:0;
+}
+
+div#header div#gNav ul li {
+	display: inline;
+	border-right: 1px solid #333;
+	padding: 0 6px 0 3px;
+}
+/* #17206 START BY xa_luoys 20180103 Goobike全体のHTTPS化 */
+div#header div#gNav ul li.bookmark a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_star.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.english a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_world.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.mypage a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_mypage.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.sitemap a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_guide.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.inquire a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_help.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.goonet a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_goo.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.goobikeparts a {
+	background:#fff url(https://img.goo-net.com/goobike/bike/common/img/icon_goobike.gif) no-repeat scroll left center;
+	padding:0 0 0 16px;
+}
+div#header div#gNav ul li.inquire {
+	border-right:none;
+}
+div#header div#gNav ul li.goobikeparts {
+	margin-left: 10px;
+}
+
+div#header div#gNav ul li.goonet {
+	border-right:none;
+	padding: 0 0 0 3px;
+}
+div#header div#headerMv {
+	width:960px;
+	float:left;
+}
+div#header div#headerMv p.gooLogo,
+div#header div#headerMv p.conLogo {
+	float:left;
+	margin-top: 6px;
+}
+
+div#header div#headerMv p.logonew {
+	float:left;
+	margin:27px 0 0px;
+}
+div#header div#headerMv p.hdBnr {
+	float:right;
+	width:auto;
+	height:auto;
+	margin:4px 0 ;
+}
+
+div#header div#headerMv p.hdBnr.large {
+	margin:10px 0 ;
+}
+
+div#header div#headerMv p.hdBnr.afl {
+	margin:9px 0 ;
+	*margin-bottom: 6px;
+}
+
+div#header div#headerMv p.new_hdBnr {
+	float:right;
+	width:400px;
+	height:50px;
+	margin:8px 0 ;
+}
+/* ナビゲーション (menu) */
+
+div#menu {
+	clear:both;
+	height:29px;
+}
+div#menu ul {
+	border:1px solid #ccc;
+	border-bottom:none;
+	height:28px;
+	background:url(https://img.goo-net.com/goobike/bike/common/img/top_menu_bg.gif) 0 bottom no-repeat;
+	}
+div#menu ul li {
+	display:inline;
+	}
+div#menu ul li a {
+	display:block;
+	float:left;
+	padding:0px 7px;
+	line-height:28px;
+	border-right:1px solid #ccc;
+	background:url(https://img.goo-net.com/goobike/bike/common/img/top_menu_bg.gif) 0 bottom no-repeat;
+	text-decoration:none;color:#333;
+	font-size:13px;
+	}
+div#menu ul li a.on,
+div#menu ul li a:hover {
+	background:url(https://img.goo-net.com/goobike/bike/common/img/top_menu_bg_on.gif) 0 bottom repeat-x;
+	color:#fff;
+	}
+div#menu ul li a.on {
+	font-weight:bold;
+	}
+
+div#submenu {
+	clear:both;
+	height:21px;
+	position: relative;
+}
+
+div#submenu p#showlist{
+	position: absolute;
+	top: 1px;
+	right: 5px;
+}
+
+div#submenu ul {
+	height:21px;
+	background:url(https://img.goo-net.com/goobike/bike/common/img/top_submenu_bg.gif) 0 top repeat-x;
+	padding: 2px 0 0 5px;
+	}
+div#submenu ul li {
+	display:inline;
+	}
+
+div#submenu ul li a {
+	color:#fff;
+	display:block;
+	float:left;
+	padding:0px 10px;
+	line-height:19px;
+	border-right:1px solid #999;
+	text-decoration:none;
+	color:#fff;
+	}
+div#submenu ul li a.on,
+div#submenu ul li a:hover {
+	color:#333;
+	background: #fff;
+	}
+div#submenu ul li a.on{
+	font-weight: bold;
+}
+
+
+div#submenu ul li a.on {
+	font-weight:bold;
+	}
+
+
+
+/* パンくず
+-----------------*/
+
+div.topicpath {
+	clear:both;
+	padding:5px 0 ;
+}
+div.topicpath ul li {
+	display: inline;
+	line-height: 1.4;
+}
+div.topicpath ul li a {
+	background: url(https://img.goo-net.com/goobike/bike/common/img/topicpath.gif) right 0 no-repeat ;
+	padding-right: 13px;
+	margin-right:5px;
+}
+
+p#ad_bnr {
+/*	font-size:80%;*/
+	text-align: left;
+	padding-bottom: 5px;
+}
+div#ad_txBnr {
+	border-style:solid;
+	border-color:#ccc;
+	border-width:1px;
+	margin-bottom:10px;
+}
+
+
+/* Main Definition */
+
+
+
+
+/* Sub Definition */
+
+div#sub h2{
+	border:1px solid #999;
+	line-height: 24px;
+	padding:0 8px;
+	background-color:#dedede;
+	font-size:117%;
+	font-weight:bold;
+}
+
+div#sub h3{
+	border:1px solid #999;
+	line-height: 24px;
+	padding:0 8px;
+	background: url(https://img.goo-net.com/goobike/bike/common/img/bg_sub_h3.gif) no-repeat;
+	font-size:117%;
+	font-weight:bold;
+}
+
+div#sub p.rightBnr{
+	margin-bottom:10px;
+}
+
+div#sub div.subCon {
+	border: 1px solid #999;
+	border-top:none;
+	padding:5px;
+	height:1%;
+}
+
+div#mySearch,
+div#rcmBikeParts,
+div#gbp{
+	margin-bottom:10px;
+}
+
+div#sub div#mySearch div.subCon,
+div#sub div#rcmBikeParts div.subCon
+{
+	padding: 0 0 10px 0;
+}
+
+div#sub div#gbp h3{
+	padding: 4px 8px;
+}
+
+div#sub div#gbp p{
+	line-height: 1.6;
+}
+
+div#sub div#gbp p span{
+	color: #ff0000;
+	font-weight: bold;
+}
+
+
+div#mySearch ul {
+}
+div#mySearch ul li {
+	background: url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_black_large.gif) 8px 5px no-repeat;
+	padding-left: 16px;
+	line-height: 1.4;
+}
+div#mySearch ol {
+	width:188px;
+}
+div#mySearch ol li {
+	background:none;
+	margin-left: 1px;
+	display:inline;
+}
+div#mySearch ol li a {
+}
+
+div#mySearch ol li a img {
+	border:1px solid #ccc;
+	vertical-align: bottom;
+	margin-bottom:1px;
+}
+
+div#mySearch ul li#view_history{
+	background: #efefef url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_black_large.gif) 8px 10px no-repeat;
+	padding: 5px 0 5px 16px;
+}
+
+div#mySearch ul li#view_history_img{
+	background: #efefef;
+	padding: 5px 0 5px 5px;
+	margin: 0 0 5px 0;
+}
+
+div#mySearch ul li.upb{
+	background: url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_black_large.gif) 8px 10px no-repeat;
+	border-top: 1px solid #efefef;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+div#mySearch ul li.upb a.sub{
+	margin-left: 10px;
+	padding-left: 10px;
+	background: url(https://img.goo-net.com/goobike/bike/common/img/icon_li_sub.gif) 0px 3px no-repeat;
+}
+
+div#rcmBikeParts ul {
+}
+div#rcmBikeParts ul li {
+	background: url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_black_large.gif) 8px 5px no-repeat;
+	padding-left: 16px;
+	line-height: 1.4;
+}
+div#rcmBikeParts ol {
+	width:188px;
+}
+div#rcmBikeParts ol li {
+	background:none;
+	margin-left: 1px;
+	display:inline;
+}
+div#rcmBikeParts ol li a {
+}
+
+div#rcmBikeParts ol li a img {
+	border:1px solid #ccc;
+	vertical-align: bottom;
+	margin-bottom:1px;
+}
+
+
+div#rcmBikeParts div#rcm{
+	background: #efefef;
+	padding: 5px 0 5px 5px;
+	margin: 0 0 5px 0;
+}
+
+div#rcmBikeParts div#rcm p {
+	float:left;
+	width: 60px;
+	padding: 0 3px 0 0;
+	text-align: center;
+}
+div#rcmBikeParts ul.sp {
+	border-top:1px dashed #ccc;
+	border-bottom:1px dashed #ccc;
+	margin-bottom:5px;
+	padding:5px 0;
+}
+div#rcmBikeParts ul.sp li {
+	background:url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_red_large.gif) no-repeat 8px 5px;
+}
+
+
+
+/* Footer Definition */
+div.footer_proto{
+	margin-top:10px;
+	padding:5px;
+	font-size: 75%;
+}
+div.footer_proto img{
+	float:left;
+}
+div.footer_proto p{
+	margin-left:90px;
+}
+
+
+/* FOOTER AREA */
+
+
+div#footer div#bikearea h3{
+	display: none;
+}
+
+div#footer div#bikearea {
+	background: url(https://img.goo-net.com/goobike/bike/common/img/bg_bikearea_t.gif) top left no-repeat;
+	overflow:hidden; zoom:1;
+}
+
+div#footer div#bikearea ul{
+	background: url(https://img.goo-net.com/goobike/bike/common/img/bg_bikearea_b.gif) bottom left no-repeat;
+	padding: 0 20px 0 250px;
+}
+
+div#footer div#bikearea li{
+	display: inline;
+	height: 34px;
+	line-height: 34px;
+	margin: 0 10px;
+}
+
+div#footer dl#bikefooter{
+	margin: 10px 0;
+	border-top: 1px solid #e5e5e5;
+}
+
+
+#bikefooter{
+	border-top: 1px solid #e5e5e5;
+	margin: 10px 0;
+}
+
+dd.bikefooterlist{
+	padding-left: 143px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+dd.bikefooterlist ul li{
+	display: inline;
+	margin: 0 10px;
+	line-height: 20px;
+	height: 20px;
+}
+
+dt#brandpagelist{
+	float:left;
+	width: 143px;
+	padding: 2px 0 0 10px;
+	font-weight:bold;
+}
+
+dt#bikepartsbrandlist{
+	float:left;
+	width: 143px;
+	padding: 2px 0 0 10px;
+	font-weight:bold;
+}
+
+#flist {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#flist li {
+	float: left;
+	white-space: nowrap;
+}
+#flist h2 {
+	margin: 0;
+	padding: 0;
+	font-weight: 100;
+	float: left;
+}
+.footrim {
+	border-top: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+}
+
+table#flist_wrapper {
+	width: 100%;
+	margin-top: 5px;
+	vertical-align: top;
+	border-top: solid 1px #cccccc;
+}
+table#flist_wrapper td {
+	padding: 5px;
+	font-size: 11px; /* FontSize */
+	line-height: 1.3;
+}
+
+
+
+.mjfff { color:#fff; }
+.mjfff strong { font-weight:bold; }
+
+div#rcmBikeParts div.info{
+	padding: 5px 0 5px 5px;
+	margin: 0 0 10px 0;
+	line-height: 1.8em;
+	border-top: 1px #ccc dashed;
+	/*border-bottom: 1px #ccc dashed;*/
+}
+
+div#rcmBikeParts div.info p{
+	padding: 0 0 0 11px;
+	background:url(https://img.goo-net.com/goobike/bike/common/img/icon_arrow_red_large.gif) no-repeat 3px 5px;
+}
+/* #17206 END BY xa_luoys 20180103 Goobike全体のHTTPS化 */
+
+
+/*------------------------------------------
+追加 2010/07/24
+-------------------------------------------*/
+
+div#auc {
+clear:both;
+margin:20px auto;
+width:660px;
+}
+
+
+div#topBtnArea {
+background:url("/search/common/img/used_back_rt1.gif") repeat-x scroll center top transparent;
+border-color:#CCCCCC ;
+border-style:solid solid none;
+border-width:1px 1px medium;
+clear:both;
+padding:3px 0;
+}
+
+div#topBtnArea h2 {
+clear:both;
+float:left;
+font-size:100%;
+font-weight:bold;
+padding-left:8px;
+/*width:550px;*/ /*#13885 MODIFIED  BY xa_chenjj 20170606 車種一覧簡易表示修正 */
+}
+
+div#auction {
+border:1px solid #CCCCCC;
+height:97px;
+margin:0 auto 10px;
+width:958px;
+}
+
+div#auction dl dt {
+float:left;
+margin-left:10px;
+margin-top:10px;
+width:107px;
+}
+
+div#auction dl dd {
+float:left;
+margin-left:-3px;
+margin-top:10px;
+width:120px;
+}
+
+div#auction dl dd span {
+color:#FF0000;
+font-weight:bold;
+}
+
+/*------------------------------------------
+追加 2010/07/27
+-------------------------------------------*/
+
+#qpon_area{
+	background:url(/search/common/img/qpon.jpg) no-repeat 0px 6px;
+	width:192px;
+	height: 259px;
+	position: relative;
+	margin:0 auto 12px;
+}
+
+#qpon_area p#id{
+	font-weight: bold;
+	color:#ffffff;
+	font-size:14px;
+	position: absolute;
+	top:117px;
+	left:50px;
+}
+
+#qpon_area p#mmdd{
+	font-size:10px;
+	position: absolute;
+	top:144px;
+	left:30px;
+}
+
+#qpon_area p#nebiki{
+	font-size:35px;
+	color: #ff0000;
+	font-weight: bold;
+	position: absolute;
+	top:191px;
+	left:69px;
+	line-height: 1;
+}
+
+/*--------------------------------------------
+追加 2010/0730
+-------------------------------------------- */
+
+div#header div#headerMv p.hdBnr02 {
+	float:right;
+	width:468px;
+	height:60px;
+	margin:6px 0 ;
+}
+
+
+div#header div#headerMv p.new_hdBnr02 {
+	float:right;
+	width:468px;
+	height:60px;
+	margin:8px 0 ;
+}
+
+/* 20120203追加分ここから */
+
+div.TabArea {
+	padding: 5px 5px 0;
+}
+
+div.TabArea ul li {
+	float: left;
+	margin-right: 3px;
+}
+
+
+div.TabArea ul li a {
+	position: relative;
+	color: #333333;
+	text-decoration: none;
+	background-color: #d1dcff;
+	width: 111px;
+	text-align: center;
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	behavior: url(/skeleton/120200_rev/css/PIE.htc);
+	padding:12px 5px 10px;
+	line-height: 1.0;
+	display: block;
+	font-weight: bold;
+}
+
+div.TabArea ul li a:hover {
+	color: #ffffff;
+	background-color: #3366ff;
+}
+
+div.TabArea ul li.on a {
+	color: #ffffff;
+	background-color: #3366ff;
+}
+
+/* 20120203追加分ここまで */
+
+/* =========================================================
+以下20131015追加	新ヘッダー
+========================================================= */
+
+/* 共通 */
+
+.mb5 {
+	margin-bottom:5px !important;
+}
+.mb10 {
+	margin-bottom:10px !important;
+}
+.mr3 {
+	margin-right:3px !important;
+}
+.mt20 {
+	margin-top:20px !important;
+}
+.pt0 {
+	padding-top:0 !important;
+}
+.pr0 {
+	padding-right:0 !important;
+}
+.pr5 {
+	padding-right:5px !important;
+}
+.pr7 {
+	padding-right:7px !important;
+}
+.pr14 {
+	padding-right:14px !important;
+}
+div#header {
+	width:960px;
+	margin:0 auto;
+}
+/*#1728 START by liujb 20140827 ヘッダーへのリンク追加*/
+div#wrap h1 {
+	width:450px;
+	font-size:11px;
+	border:none !important;
+	float: left;
+	font-weight:bold;
+	padding: 7px 10px 5px 0;
+}
+/*#1728 END  by liujb 20140827 ヘッダーへのリンク追加*/
+/* .hd1 */
+
+div#header div.hd1 div.quickLink {
+    float: right;
+    padding: 7px 0 5px;
+}
+div#header div.hd1 div.quickLink a {
+	text-decoration:none;
+	font-weight:bold;
+}
+div#header div.hd1 div.quickLink ul li {
+    display: inline;
+    padding: 0 5px 0 18px;
+}
+div#header div.hd1 div.quickLink ul li#qnav01 {
+    background: url("/common/img/icon_header01.gif") no-repeat scroll 0 0 transparent;
+}
+div#header div.hd1 div.quickLink ul li#qnav02 {
+    background: url("/common/img/icon_header02.gif") no-repeat scroll 0 0 transparent;
+}
+div#header div.hd1 div.quickLink ul li#qnav03 {
+    background: url("/common/img/icon_header03.gif") no-repeat scroll 0 0 transparent;
+}
+
+div#header div.hd1 div.quickLink ul li#qnav04 {
+    background: url("/common/img/icon_header04.gif") no-repeat scroll 0 0 transparent;
+}
+
+
+/* .hd2 */
+
+div#header div.hd2 a:hover img{
+	opacity:0.8 !important;
+	filter: alpha( opacity=80 ) !important;
+	-ms-filter: "alpha( opacity=80)" !important;
+	zoom: 1 !important;
+}
+div#header div.hd2 div.logoArea {
+	width:218px;
+    float: left;
+	padding-right: 10px;
+}
+div#header div.hd2 div.searchArea {
+    background: url("/common/img/bg_searcharea.gif") no-repeat scroll 0 0 transparent;
+    float: left;
+    width: 316px;
+	height:54px;
+    margin-right:4px;
+}
+div#header div.hd2 div.searchArea div.searchAreaText {
+	background: url("/common/img/bg_searcharea_text.gif") no-repeat scroll 0 0 transparent;
+	line-height:18px;
+    width: 304px;
+	margin:4px auto 3px;
+}
+div#header div.hd2 div.searchArea div.searchAreaText li {
+	font-size:11px;
+	float:left;
+	padding:0 2px;
+}
+div#header div.hd2 div.searchArea div.searchAreaText li a {
+	padding-right:3px;
+	text-decoration:underline;
+}
+div#header div.hd2 div.searchArea div.searchAreaText li.on a {
+	color: #000000;
+    font-weight: bold;
+	text-decoration:none;
+}
+
+div#searchAreaBox input.searchAreaForm{
+	width:263px;
+	height:20px;
+	margin-left:6px;
+	border-top:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;
+	border-left:1px solid #d9d9d9;
+}
+input#searchAreaBtn{
+	margin-left:-4px;
+	height:24px;
+	vertical-align:bottom;
+}
+
+div#header div.hd2 div.bnrArea {
+}
+div#header div.hd2 div.bnrArea li {
+	float:left;
+}
+div#header div.hd2 div.bnrArea li.perusal {
+	background: url("/common/img/pc_index/bg_header01.gif") no-repeat scroll 0 0 transparent;
+	width:61px;
+	height:44px;
+	margin-right:2px;
+	padding:10px 0 0 40px;
+}
+div#header div.hd2 div.bnrArea li.favorite {
+	background: url("/common/img/pc_index/bg_header02.gif") no-repeat scroll 0 0 transparent;
+	width:61px;
+	height:44px;
+	margin-right:10px;
+	padding:10px 0 0 40px;
+}
+div#header div.hd2 div.bnrArea li.perusal span,
+div#header div.hd2 div.bnrArea li.favorite span {
+	font-size:24px;
+	font-weight:bold;
+	line-height:1;
+	display: inline-block;
+	padding-right:2px;
+}
+/* .hd3 */
+
+div#header div.hd3 ul.navi {
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 2px solid #14499a;
+}
+
+div#header div.hd3 ul.navi li {
+	overflow:hidden;
+	display:block;
+	float:left;
+	width:103px;/* 20140304修正 */
+	line-height:30px;
+	font-size:13px;
+	text-align:center;
+	border-right: 1px solid #cccccc;
+	font-family: arial;/* 20131031追加 */
+	height: 30px;/* 20131119追加 */
+}
+
+div#header div.hd3 ul.navi li.subNavi_btn{
+	width: 116px !important; /* #3338 MODIFIED by xa_ningzl 20150121 鑑定加盟店用ＬＰの追加 */
+}
+/* 20140417追加 */
+
+div#header div.hd3 ul.navi li.w80{
+    /* #3337 START by xa_zhangb 20150408 販売店詳細ページリニューアル*/
+	/*width: 80px !important;*/
+    width: 86px !important;
+
+    /* #3337 END by xa_zhangb 20150408 販売店詳細ページリニューアル*/
+}
+
+/* //20140417追加 */
+
+
+div#header div.hd3 ul.navi li a{
+	color: #000;
+	background: url("/common/img/bg_navi_off.gif") repeat-x scroll 0 0 transparent;
+}
+
+div#header div.hd3 ul.navi li a:hover{
+	color:#7e7e7e;
+	background: url("/common/img/bg_navi_on.gif") repeat-x scroll 0 0 transparent !important;
+}
+
+
+/* 20140417修正 */
+
+div#header div.hd3 ul.navi li .sub img,
+div#header div.hd3 ul.navi li .sub02 img,
+div#header div.hd3 ul.navi li .sub03 img {               /* #3338 MODIFIED by xa_ningzl 20150121 鑑定加盟店用ＬＰの追加 */
+	float: none !important;
+	display: inline !important;
+	padding: 0 0 0 4px !important;
+	vertical-align: -3px !important;
+}
+
+*html div#header div.hd3 ul.navi li .sub{
+	padding-top: 7px !important;
+	height: 23px;
+}
+*html div#header div.hd3 ul.navi li .sub02,
+*html div#header div.hd3 ul.navi li .sub03 {             /* #3338 MODIFIED by xa_ningzl 20150121 鑑定加盟店用ＬＰの追加 */
+	padding-top: 7px !important;
+	height: 23px;
+}
+
+/* //20140417修正 */
+
+
+div#header div.hd3 ul.navi li.last{
+	border-right: none;
+}
+
+div#header div.hd3 ul.navi li.last a span{
+	background: url("/common/img/img_cart.png") no-repeat 8px center;
+	background-size: 24px 22px !important;
+	padding-left: 14px;
+	display: block;
+}
+
+div#header div.hd3 ul.navi li a {
+	text-decoration:none;
+	display:block;
+	color:#000;
+}
+
+div#header div.hd3 ul.navi li a:hover{
+	color:#7e7e7e;
+}
+
+div#header div.hd3 ul.navi li a img{
+	vertical-align:middle;
+	padding:5px 0 0 10px;
+	display:block;
+	float:left;
+}
+
+/* 20140417修正 */
+/* #3338 START by xa_ningzl 20150121 鑑定加盟店用ＬＰの追加 */
+div#header div.hd3 ul.subnavi,
+div#header div.hd3 ul.subnavi02,
+div#header div.hd3 ul.subnavi03{
+	height:32px;
+	display:none;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi02,
+div#header div.hd3 ul.subnavi03{
+	position: relative;
+    word-break: keep-all;
+}
+div#header div.hd3 ul.subnavi li,
+div#header div.hd3 ul.subnavi02 li,
+div#header div.hd3 ul.subnavi03 li{
+	float:left;
+	width: 159px;
+	line-height:30px;
+	height:32px;
+	font-size:13px;
+	text-align:center;
+	border-right: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi03 li{
+    width: 169px;
+}
+div#header div.hd3 ul.subnavi02 li.first {
+	position: absolute;
+	border-left: 1px solid #cccccc;
+	left: 415px;
+
+}
+div#header div.hd3 ul.subnavi03 li.first {
+    position: absolute;
+    border-left: 1px solid #cccccc;
+    left: 315px;
+}
+div#header div.hd3 ul.subnavi02 li.last {
+	position: absolute;
+	left: 576px;
+}
+div#header div.hd3 ul.subnavi03 li.last {
+    position: absolute;
+    left: 486px;
+}
+div#header div.hd3 ul.subnavi li.last {
+	width: 158px;
+	/*border-right: none;*/ /* #27336 MODIFY BY xa_zhangtl 20200629 【GB】＜駐車場コンテンツ撤去＞開発 */
+}
+div#header div.hd3 ul.subnavi li a,
+div#header div.hd3 ul.subnavi02 li a,
+div#header div.hd3 ul.subnavi03 li a{
+	text-decoration:none;
+	display:block;
+	color:#000;
+	background-color: #fbfbfb;
+}
+div#header div.hd3 ul.subnavi li a:hover,
+div#header div.hd3 ul.subnavi02 li a:hover,
+div#header div.hd3 ul.subnavi03 li a:hover{
+	border-bottom:2px solid #14499a;
+}
+/* #3338 END by xa_ningzl 20150121 鑑定加盟店用ＬＰの追加 */
+/* 20140417修正 */
+
+/* 下層ページの新header */
+
+div#header .subPage {
+	display:inline;
+    font-size: 11px;
+    margin: 0 auto !important;
+    width: 960px;
+}
+div#header .subPage div.hd2{
+	width:960px;
+}
+div#header .subPage div.hd2 p.logonew {
+	float:left;
+	width:218px;
+	margin: 14px 0 0;
+}
+div#header .subPage div.hd2 p.hdBnr {
+	float:right;
+	margin-bottom: 10px;
+	width:728px;
+}
+/* =========================================================
+20131015追加ここまで	新ヘッダー
+========================================================= */
+/* GOOBIKE_DESIGN-332 */
+div#header div.list ul.navi{background-color: #f0f0f0;}
+div#header div.list ul.navi li{width: 129px;}
+div#header div.list ul.navi li.last{width: 130px;}
+div#header div.list ul.subnavi03 li.first{left: 350px !important;}
+div#header div.list ul.subnavi03 li.last{left: 521px !important;}
+div#header div.list ul.subnavi02 li.first{left: 477px !important;}
+div#header div.list ul.subnavi02 li.last{left: 638px !important;}
+div#header div.hd3 ul.navi li .sub04 img {
+	float: none !important;
+	display: inline !important;
+	padding: 0 0 0 4px !important;
+	vertical-align: -3px !important;
+}
+*html div#header div.hd3 ul.navi li .sub04 {
+	padding-top: 7px !important;
+	height: 23px;
+}
+div#header div.hd3 ul.subnavi04{
+	height:32px;
+	display:none;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	position: relative;
+    word-break: keep-all;
+}
+div#header div.hd3 ul.subnavi04 li{
+	float:left;
+	width: 169px;
+	line-height:30px;
+	height:32px;
+	font-size:13px;
+	text-align:center;
+	border-right: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi04 li.first {
+    position: absolute;
+    border-left: 1px solid #cccccc;
+    left: 112px;
+    width: 163px;
+}
+div#header div.hd3 ul.subnavi04 li.second {
+    position: absolute;
+    left: 277px;
+    width: 110px;
+}
+div#header div.hd3 ul.subnavi04 li.last {
+    position: absolute;
+    left: 388px;
+    width: 124px;
+}
+div#header div.hd3 ul.subnavi04 li a{
+	text-decoration:none;
+	display:block;
+	color:#000;
+	background-color: #fbfbfb;
+}
+div#header div.hd3 ul.subnavi li a,
+div#header div.hd3 ul.subnavi02 li a,
+div#header div.hd3 ul.subnavi03 li a,
+div#header div.hd3 ul.subnavi04 li a{
+	font-family: verdana,arial,sans-serif !important;
+	font-size: 12px;
+}
+div#header div.hd3 ul.subnavi04 li a:hover{
+	border-bottom:2px solid #14499a;
+}
+div#header div.list ul.navi li.w46 {width: 46px !important;}
+div#header div.list ul.navi li.w95 {width: 95px !important;}
+div#header div.list ul.navi li.w96 {width: 96px !important;}
+div#header div.list ul.navi li.w112 {width: 112px !important;}
+div#header div.list ul.navi li.w113 {width: 113px !important;}
+div#header div.list ul.navi li.subNavi_btn.w118 {width: 118px !important;}
+div#header div.list ul.navi li.subNavi_btn.w121 {width: 121px !important;}
+div#header div.list ul.navi li.subNavi_btn.w123 {width: 123px !important;}
+div#header div.list ul.navi li.subNavi_btn.w126 {width: 126px !important;}
+/* //GOOBIKE_DESIGN-332 */
+/*#10378 START BY xa_lijp 20160930 NOTES MISS*/
+.rv_box_r_h {
+  display: table;
+  width: 100%;
+  padding-bottom: 9px;
+  padding-top: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*#10378 END BY xa_lijp 20160930 NOTES MISS*/

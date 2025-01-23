@@ -1,0 +1,31 @@
+// JavaScript Document
+
+jQuery.noConflict();
+jQuery(document).ready(function($){
+$(function() {
+    $(".sub").click(function(){
+		$(".subnavi").slideToggle(300);
+		$(".subnavi02").slideUp(300);
+		$(".subnavi03").slideUp(300);
+		$(".subnavi04").slideUp(300);
+    });
+	$(".sub02").click(function(){
+		$(".subnavi02").slideToggle(300);
+		$(".subnavi").slideUp(300);
+		$(".subnavi03").slideUp(300);
+		$(".subnavi04").slideUp(300);
+    });
+    $(".sub03").click(function(){
+        $(".subnavi03").slideToggle(300);
+        $(".subnavi").slideUp(300);
+        $(".subnavi02").slideUp(300);
+        $(".subnavi04").slideUp(300);
+    });
+    $(".sub04").click(function(){
+        $(".subnavi04").slideToggle(300);
+        $(".subnavi").slideUp(300);
+        $(".subnavi02").slideUp(300);
+        $(".subnavi03").slideUp(300);
+    });
+});
+});

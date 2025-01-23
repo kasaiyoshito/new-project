@@ -1,0 +1,231 @@
+var target_state = 0;
+var tab_state = 0;
+var tab1a_state = 3;
+
+var elements = new Object();
+function getDocu(param) 
+{
+	if(elements[param]) return elements[param];
+	var retval = document.getElementById(param);
+	if(retval){
+		elements[param] = retval;
+	}
+	return retval;
+}
+
+
+function target(param){
+
+	switch(param){
+		case 'gb_bike'      : target_state = 0; break;
+		case 'gbp_all'	    : target_state = 1; break;
+		case 'gb_shop'      : target_state = 2; break;
+		case 'gb_topics'    : target_state = 3; break;
+		case 'gb_community' : target_state = 4; break;
+		case 'gb_map'       : target_state = 5; break;
+		default:           target_state = 0; break;
+	}
+    var a =getDocu('snav1').getElementsByTagName("li").length;
+	for(var i=0; i<a; i++){
+		getDocu( 'snav0' + (i+1) ).className  = (i == target_state) ? "on": "off";
+	}
+
+}
+
+
+function mt_tab(param){
+
+
+
+	switch(param){
+		case 'area'   : tab_state = 0; break;
+		case 'topics' : tab_state = 1; break;
+		default       : tab_state = 0; break;
+	}
+	for(var i=0; i<3; i++){
+		getDocu( 'm_tab' + (i+1) ).style.display = (i == tab_state) ? "block"  : "none";
+		getDocu( 'mt_tab_nav' + (i+1) ).className  = (i == tab_state) ? "on": "off";
+	}
+	var str = param + "|";
+	setCookie("bike_index",str, 60);
+}
+
+function mt_tab1a(param){
+	tab_state = param;
+	for(var i=1; i<=8; i++){
+		getDocu( 'm_tab1a_c' + i ).style.display = (i == tab_state) ? "block"  : "none";
+		getDocu( 'mt_tab1a_nav' + i ).className  = (i == tab_state) ? "on": "off";
+	}
+	var str = param + "|";
+	setCookie("bike_index",str, 60);
+}
+
+
+
+function setIndexData(){
+	var m1_str = "";
+
+	var str = getCookie("bike_index");
+	if(str != ""){
+		var arr = str.split("|");
+		m1_str = arr[0];
+	}
+
+	if(m1_str != ""){
+        	m1(m1_str);
+        }
+}
+
+
+function setCookie(key, value, keep_days){
+
+	var now = new Date();
+	var dt = new Date(now.getTime()+24*60*60*1000*keep_days);
+	var limit = dt.toGMTString();
+
+	var str = key +"=" + value + "; path=/; expires=" +limit +";";
+	document.cookie = str;
+
+}
+
+
+function getCookie(key,  tmp1, tmp2, xx1, xx2, xx3) {
+    tmp1 = " " + document.cookie + ";";
+    xx1 = xx2 = 0;
+    len = tmp1.length;
+    while (xx1 < len) {
+        xx2 = tmp1.indexOf(";", xx1);
+        tmp2 = tmp1.substring(xx1 + 1, xx2);
+        xx3 = tmp2.indexOf("=");
+        if (tmp2.substring(0, xx3) == key) {
+            return(unescape(tmp2.substring(xx3 + 1, xx2 - xx1 - 1)));
+        }
+        xx1 = xx2 + 1;
+    }
+    return("");
+
+}
+
+// どこどこ使用
+function getSurfPoint(){
+
+        var sp;
+        var area_id = 3;
+
+/************** 開発なのでコメントアウト ********
+            if (SURFPOINT) {
+
+                sp = SURFPOINT.getPrefAName();
+
+                switch (sp) {
+
+                case 'hokkaido' :
+                case 'aomori'   :
+                case 'akita'    :
+                case 'iwate'    :
+                case 'yamagata' :
+                case 'miyagi'   :
+                case 'fukushima':
+                    area_id = 1;
+                    break;
+
+                case 'gunma'   :
+                case 'tochigi' :
+                case 'ibaraki' :
+                    area_id = 2;
+                    break;
+
+                case 'tokyo'   :
+                case 'kanagawa':
+                case 'saitama' :
+                case 'chiba'   :
+                    area_id = 3;
+                    break;
+
+                case 'gifu'     :
+                case 'aichi'    :
+                case 'shizuoka' :
+                case 'mie'      :
+                    area_id = 4;
+                    break;
+
+                case 'shiga'    :
+                case 'kyoto'    :
+                case 'osaka'    :
+                case 'nara'     :
+                case 'wakayama' :
+                case 'hyogo'    :
+                    area_id = 5;
+                    break;
+
+                case 'tottori'   :
+                case 'okayama'   :
+                case 'hiroshima' :
+                case 'shimane'   :
+                case 'yamaguchi' :
+                case 'kagawa'    :
+                case 'tokushima' :
+                case 'ehime'     :
+                case 'kochi'     :
+                    area_id = 6;
+                    break;
+
+                case 'fukuoka'  :
+                case 'saga'     :
+                case 'nagasaki' :
+                case 'oita'     :
+                case 'kumamoto' :
+                case 'miyazaki' :
+                case 'kagoshima':
+                    area_id = 7;
+                    break;
+
+                default:
+                    area_id = 3;
+                    break;
+
+                }
+
+            }else{
+                area_id = 3;
+            }
+****************/
+    mt_tab1a_default(area_id);
+
+    //top_bnr_img(area_id); delete by xiay 20131029
+
+
+}
+
+
+// エリアタブ表示
+function mt_tab1a_default(area_id){
+//alert(area_id);
+	tab_state = getCookie("bike_index").substring(0,1);
+
+        // デフォルト指定
+        if( (tab_state > 0) && (tab_state < 9) ){
+        }else{
+            tab_state = area_id;
+        }
+
+	for(var i=1; i<=8; i++){
+		getDocu( 'm_tab1a_c' + i ).style.display = (i == tab_state) ? "block"  : "none";
+		getDocu( 'mt_tab1a_nav' + i ).className  = (i == tab_state) ? "on": "off";
+	}
+}
+
+
+// 上部の画像（バナー？）表示
+/******
+* delete by xiay 20131029 
+function top_bnr_img(area_id){
+
+	for(var i=1; i<=7; i++){
+		//alert(getDocu( 'top_bnr' + i ));
+		getDocu( 'top_bnr' + i ).style.display = (i == area_id) ? "block"  : "none";
+	}
+
+}
+******/
+

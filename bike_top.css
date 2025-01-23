@@ -1,0 +1,59 @@
+/* top.html用CSS */
+
+#mymenu #guest2 {
+    background: url("/skeleton/111216_abc/b/img/imgCon2.gif") no-repeat scroll 210px 61px #FFFFAC;
+    padding: 7px 10px;
+}
+
+#mymenu #guest2 #topTxt {
+    line-height: 1.5;
+    padding-bottom: 8px;
+}
+
+#mymenu #guest2 #topTxt span.point {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+#mymenu #guest2 #logBtn {
+    margin: 0 5px 5px;
+}
+
+#mymenu #guest2 ul {
+    margin-left: 6px;
+}
+#mymenu #guest2 ul li {
+    background: url("/skeleton/111216_abc/b/img/arowOrg.gif") no-repeat scroll 0 5px transparent;
+    line-height: 1.6;
+    padding-left: 15px;
+}
+
+
+
+/* ヘッダーhtml用CSS */
+
+div#header div#headerMv div.logonew2 {
+    float: left;
+    margin: 6px 0 0;
+    width: 218px;
+}
+
+div#header div#headerMv div.logonew2 span.point {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+div#header div#headerMv div.logonew2 p {
+    margin: 0 0 0 5px;
+}
+/*add by  zhaoyukai 20130403 start*/
+#smplink {
+	font-size:50px;
+	width:100%;
+	text-align:center;
+}
+
+
+
+
+/*add by  zhaoyukai 20130403 start*/

@@ -1,0 +1,150 @@
+/*#10378 START by xa_liuyan 20160816 #11177 販売店レビュー　101)PC TOPページ*/
+/* =========================================================
+.hd3
+========================================================= */
+div#header div.hd3 ul.navi {
+    border-left: 1px solid #cccccc;
+    border-right: none;
+    border-bottom: 2px solid #14499a;
+}
+div#header div.hd3 ul.navi li {
+    /*overflow:hidden;
+    display:block;
+    float:left;*/
+    /*width:103px;*//* 20140304修正 */
+    /*line-height:30px;*/
+    font-size:13px;
+    text-align:center;
+    border-right: 1px solid #cccccc;
+    font-family: arial;/* 20131031追加 */
+    /*height: 30px;*//* 20131119追加 */
+}
+div#header div.hd3 ul.navi li a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+div#header div.hd3 ul.navi li.subNavi_btn{
+    width: auto;
+}
+div#header div.hd3 ul.navi li.subNavi_btn a{
+    width: auto;
+    position: relative;
+    padding-right: 20px;
+}
+div#header div.hd3 ul.navi li.subNavi_btn a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background: url(/common/img/pc_index/icon_g_navi.png) right center no-repeat;
+}
+div#header div.hd3 ul.navi li.w80{
+    /*width: 80px !important;*/
+}
+div#header div.hd3 ul.navi li .sub img,
+div#header div.hd3 ul.navi li .sub02 img{
+    float: none !important;
+    display: inline !important;
+    padding: 0 0 0 4px !important;
+    vertical-align: -3px !important;
+}
+*html div#header div.hd3 ul.navi li .sub{
+    padding-top: 7px !important;
+    height: 23px;
+}
+*html div#header div.hd3 ul.navi li .sub02{
+    padding-top: 7px !important;
+    height: 23px;
+}
+div#header div.hd3 ul.navi li.last{
+    border-right: none;
+}
+div#header div.hd3 ul.navi li.last a span{
+    background: url("/common/img/img_cart.png") no-repeat 8px center;
+    background-size: 24px 22px !important;
+    padding-left: 14px;
+    display: block;
+}
+div#header div.hd3 ul.navi li a {
+    text-decoration:none;
+    display:block;
+    color:#000;
+    background: url("/common/img/bg_navi_off.gif") repeat-x scroll 0 0 transparent;
+}
+div#header div.hd3 ul.navi li a:hover{
+    color:#7e7e7e;
+    background: url("/common/img/bg_navi_on.gif") repeat-x scroll 0 0 transparent !important;
+}
+div#header div.hd3 ul.navi li a img{
+    vertical-align:middle;
+    padding:5px 0 0 10px;
+    display:block;
+    float:left;
+}
+div#header div.hd3 ul.subnavi {
+    position: relative;
+    height:32px;
+    display:none;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi li {
+    float:left;
+    width:158px; /*width: 158px;*/ /* #9610 MODIFIED by xa_ningzl 20161007 バイク売却へのリンク削除 */
+    line-height:30px;
+    height:32px;
+    font-size:13px;
+    text-align:center;
+    border-right: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi li.first {
+    border-left: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi li.last {
+    border-right: 1px solid #cccccc;
+}
+div#header div.hd3 ul.subnavi li a {
+    text-decoration:none;
+    display:block;
+    color:#000;
+    background-color: #fbfbfb;
+}
+div#header div.hd3 ul.subnavi li a:hover {
+    border-bottom:2px solid #14499a;
+}
+
+div#header div.hd3 ul.subnavi.subnavi1 {}
+/*div#header div.hd3 ul.subnavi.subnavi1 .last {border-right: none;}*/ /*#27336 MODIFY by xa_zhangtl 20200630 【GB】＜駐車場コンテンツ撤去＞開発*/
+div#header div.hd3 ul.subnavi.subnavi2 {padding-left: 413px;}
+div#header div.hd3 ul.subnavi.subnavi3 {padding-left: 293px;}
+div#header div.hd3 ul.subnavi.subnavi4 {padding-left: 95px;}
+div#header div.hd3 ul.subnavi.subnavi5 {padding-left: 638px;}
+div#header div.hd3 ul.subnavi.subnavi5 .last {border-right: none;}
+
+div#header div.list ul.navi{background-color: #f0f0f0;}
+div#header div.hd3.list ul.navi {
+    display: table;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div#header div.hd3.list ul.navi li {
+    display: table-cell;
+    vertical-align: middle;
+    width: auto !important;
+    float: none;
+}
+/*#10378 END by xa_liuyan 20160816 #11177 販売店レビュー　101)PC TOPページ*/
+
+/* #16111 START by sawaguchi 20171010 文言変更の影響でレイアウトが崩れてしまったため追加した */
+li.shopsearch {
+	width: 200px !important;
+}
+/* #16111 END by sawaguchi 20171010 文言変更の影響でレイアウトが崩れてしまったため追加した */
